@@ -1,0 +1,168 @@
+<html>
+    <head>
+       
+        <meta charset="utf-8" />
+        <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+        <meta http-equip="X-UA-compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css"> </link>
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.store.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+    </head>
+    <body>
+        <section id="onsale" style="background: #FDF2E9;">
+            <Audio autoplay loop>
+                <source src="music.mp3" type="audio/mp3">
+                </Audio>
+                <a href="project1.html" style="color:#546244;"><i class='fas fa-angle-left' style="font-size:30px"></i></a>
+            <div class="container">
+             <h1>On Sale</h1>
+              <h2>There is five categories:</h2>
+              <ul>
+                <li>Dresses</li>
+                <li>Skirts</li>
+                <li>Pants</li>
+                <li>Shirts</li>
+                <li>Blouses</li>
+              </ul> <br><br>
+               <table class="table">
+                <tr class="danger">
+                    <th>Category</th>
+                    <th>Color</th>
+                    <th>Code</th>
+                    <th>Price</th>
+                  </tr>  
+                  <tr class="active">
+                    <td>Dress</td>
+                    <td>Red</td>
+                    <td>1335</td>
+                    <td>300$</td>
+                  </tr>
+                  <tr class="info">
+                    <td>Blouse</td>
+                    <td>Green</td>
+                    <td>1213</td>
+                    <td>240$</td>
+                  </tr>
+                   <tr>
+                    <td>Skirt</td>
+                    <td>Black</td>
+                    <td>5678</td>
+                    <td>678$</td>
+                  </tr>
+            
+                  <tr class="danger">
+                    <td>Shirt</td>
+                    <td>Blue</td>
+                    <td>4563</td>
+                    <td>350$</td>
+                  </tr>
+                  <tr class="success">
+                    <td>pants</td>
+                    <td>Rose</td>
+                    <td>9871</td>
+                    <td>150$</td>
+                  </tr>
+                  <tr class="info">
+                    <td>Blouse</td>
+                    <td>Yellow</td>
+                    <td>1213</td>
+                    <td>240$</td>
+                  </tr>
+                  <tr class="active">
+                    <td>Skirt</td>
+                    <td>Red</td>
+                    <td>5678</td>
+                    <td>678$</td>
+                  </tr>
+                  <tr class="danger">
+                    <td>Shirt</td>
+                    <td>Yellow</td>
+                    <td>4563</td>
+                    <td>350$</td>
+                  </tr>
+              </table>
+              <br><br>
+    
+            <div class="container">
+              <div class="search-box">
+                <h2 class="heading" style="color:#546244;">Search From Here</h2>
+                  <i class="bx bx-search"></i>
+                  <input type="text" placeholder="Search by category name..">
+              </div>
+             
+              <div class="images">
+    
+                  <div class="image-box" data-name="dress">
+                      <img src="images/rd.jpg" alt="">
+                      <h6>Red Dress</h6>
+                  </div>
+                  <div class="image-box" data-name="shirt">
+                      <img src="images/ysh.jpg" alt="">
+                      <h6>Yellow Shirt</h6>
+                  </div>
+                  <div class="image-box" data-name="blouse">
+                      <img src="images/gb.jpg" alt="">
+                  <h6>Green Blouse</h6>
+                  </div>
+                  <div class="image-box" data-name="pants">
+                  <img src="images/rp.jpg" alt="">
+                  <h6>Rose Pants</h6>
+              </div>
+                  <div class="image-box" data-name="skirt">
+                      <img src="images/rs.jpg" alt="">
+                    <h6>Red skirt</h6>
+                  </div>
+                  <div class="image-box" data-name="skirt">
+                      <img src="images/bs.jpg" alt="">
+                    <h6>Black Skirt</h6>
+                  </div>
+                  <div class="image-box" data-name="blouse">
+                      <img src="images/yb.jpg" alt="">
+                  <h6>Yellow Blouse</h6>
+                  </div>
+                  <div class="image-box" data-name="shirt">
+                      <img src="images/bsh.jpg" alt="">
+                      <h6>Blue Shirt</h6>
+                  </div>
+                  
+              </div>
+            </div>
+            <br><br><br><br><br><br><br>
+          </section>
+
+        <script>
+    const search = document.querySelector(".search-box input"),
+      images = document.querySelectorAll(".image-box");
+
+search.addEventListener("keyup", e =>{
+    if(e.key == "Enter"){
+        let searcValue = search.value,
+            value = searcValue.toLowerCase();
+            images.forEach(image =>{
+                if(value === image.dataset.name){ //matching value with getting attribute of images
+                    return image.style.display = "block";
+                }
+                image.style.display = "none";
+         });
+    }
+});
+
+search.addEventListener("keyup", () =>{
+    if(search.value != "") return;
+
+    images.forEach(image =>{
+        image.style.display = "block";
+    })
+})
+
+     </script>  
+    
+    </body>
+</html>
